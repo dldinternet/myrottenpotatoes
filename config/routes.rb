@@ -1,6 +1,6 @@
 Myrottenpotatoes::Application.routes.draw do
   resources :movies
-  #root :to => 'movies#index'
+  root :to => 'movies#index'
   match "/" => 'movies#index'
   # Route that posts 'Search TMDb' form
   post '/movies/search_tmdb'
