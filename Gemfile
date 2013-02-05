@@ -5,8 +5,6 @@ gem 'rails', '3.1.0'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -28,10 +26,8 @@ gem 'jquery-rails'
 
 # use Haml for templates
 gem 'haml'
-group :development, :test do
-  # use Ruby debugger
-  #gem 'ruby-debug19'
-  gem 'debugger'
+group :production do
+  gem 'pg'
 end
 
 # add to end of Gemfile
@@ -41,4 +37,8 @@ group :test, :development do
   gem 'database_cleaner' # to clear Cucumber's test database between runs
   gem 'capybara'         # lets Cucumber pretend to be a web browser
   gem 'launchy'          # a useful debugging aid for user stories
+  gem 'sqlite3'
+  # use Ruby debugger
+  #gem 'ruby-debug19'
+  gem 'debugger'
 end
